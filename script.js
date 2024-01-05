@@ -7,6 +7,6 @@ function checkDomain() {
             document.getElementById('result').innerText = data.message;
         })
         .catch(error => {
-            document.getElementById('result').innerText = '无法检查域名';
+            document.getElementById('result').innerText = 'Unable to check domain name';
         });
 }

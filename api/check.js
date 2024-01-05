@@ -9,9 +9,9 @@ module.exports = async (req, res) => {
             throw new Error('API request failed');
         }
         const data = await apiResponse.json();
-        const message = data.available ? '域名未被注册' : '域名已被注册';
+        const message = data.available ? 'The domain name is not registered !' : '域The domain name has been registered !';
         res.status(200).json({ message });
     } catch (error) {
-        res.status(500).json({ message: '无法检查域名' });
+        res.status(500).json({ message: 'Unable to check domain name' });
     }
 };
