@@ -7,3 +7,8 @@ input, button {
     margin: 10px;
     padding: 5px;
 }
+
+strong {
+    color: red; /* 或您喜欢的颜色 */
+    font-weight: bold;
+}
