@@ -18,7 +18,7 @@
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
             const message = params.get('message');
-            document.getElementById('result').innerText = message || 'No result';
+            document.getElementById('result').innerHTML = message || 'No result';
         };
     </script>
     
