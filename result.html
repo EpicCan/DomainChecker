@@ -18,10 +18,17 @@
     
     <script>
         window.onload = function() {
-            const params = new URLSearchParams(window.location.search);
-            const message = params.get('message');
-            document.getElementById('result').innerHTML = message || 'No result';
-        };
+        const params = new URLSearchParams(window.location.search);
+        const message = params.get('message');
+        if (message) {
+            // 解码消息并设置为 innerHTML
+            document.getElementById('result').innerHTML = decodeURIComponent(message);
+        } else {
+            // 如果没有消息，则显示默认文本
+            document.getElementById('result').innerHTML = 'No result';
+        }
+    };
+
     </script>
 
 
