@@ -30,12 +30,12 @@ function checkDomain2() {
             // document.getElementById('result').innerText = data.message;
             console.log("Received data:", data); // 添加日志
             // 直接在当前页面显示结果
-            document.getElementById('result').innerText = data.message;
+            document.getElementById('result').innerHTML = data.message;
         })
         .catch(error => {
             // document.getElementById('result').innerText = 'Unable to check domain name';
             console.error("Error:", error); // 添加错误日志
             // 在当前页面显示错误信息
-            document.getElementById('result').innerText = 'Unable to check domain name';
+            document.getElementById('result').innerHTML = 'Unable to check domain name';
         });
 }
